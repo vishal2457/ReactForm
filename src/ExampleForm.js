@@ -1,0 +1,51 @@
+export const ExampleForm = [
+    {
+      Name: "",
+      type: "text",
+      placeholder: "Name",
+      col:{md: 3},
+      validators: [{ required: true, message: "This field is required" }],
+      label: { name: "Name", required: true },
+    },
+    {
+      Email: "",
+      type: "email",
+      placeholder: "Email",
+      col:{md: 3},
+      validators: [{ required: true, message: "This field is required" }, {pattern: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/, message: 'Please enter valid email' }],
+      label: { name: "Email", required: true },
+    },
+    {
+      Checkbox: false,
+      type: "checkbox",
+      disabled: false,
+      placeholder: "",
+      col:{md: 3},
+      label: { name: "Checkbox", required: false },
+    },
+    {
+      Date: "",
+      type: "date",
+      disabled: false,
+      col:{md: 3},
+      label: { name: "Date", required: false },
+    },
+    {
+      Dropdown: "Test",
+      type: "dropdown",
+      placeholder: "Dropdown",
+      col:{md: 3},
+      arr: [{ name: "Test" }, { name: "test2" }],
+      bindValue: "name",
+      bindName: "name",
+      label: { name: "Dropdown", required: false },
+    },
+    {
+      Address: "",
+      type: "textarea",
+      placeholder: "Address",
+      col:{md: 3},
+      label: { name: "Address", required: false },
+    },
+  ];
+  
